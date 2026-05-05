@@ -9,18 +9,18 @@ app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
     console.log("Express App is running...");
-    res.json({ status: "Express App is running!" });
+    res.json({ status: "Express App is runningg!!" });
 });
 
 app.get("/health", (req, res) => {
     console.log("Health check hit");
-    res.json({ status: "Express health is good..." });
+    res.json({ status: "Express health is fine!" });
 });
 
 app.get("/hello", (req, res) => {
     console.log("Hello endpoint hit");
     console.log(`IP : ${req.headers["x-forwarded-for"] || req.socket.remoteAddress}`);
-    res.json({ message: "Hello from Express App!" });
+    res.json({ message: "Hello from Express!" });
 });
 
 app.listen(PORT, () => {
